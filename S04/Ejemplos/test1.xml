@@ -1,0 +1,16 @@
+<!-- Esto es un comentario en una línea -->
+<!-- Varias líneas -->
+
+<!-- cmd + shift + 7 => comentar y descomentar comentarios -->
+
+
+<pirulo>
+    <mengulo attr="mi_atributo">
+        Un mengulo
+    </mengulo>>
+
+    <mengulo attr="mi_atributo">
+        Esto es otro mengulo. What???
+    </mengulo>>
+
+</pirulo>

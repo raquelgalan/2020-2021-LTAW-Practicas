@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Defino el lenguaje que quiero
+    (Gramática)
+    Un lenguaje que solo tiene la marca raíz
+    y dentro de ella solo puedo meter cadenas de texto
+-->
+<!DOCTYPE tienda[
+    <!ELEMENT tienda (producto+)>
+    <!ELEMENT producto (#PCDATA)> <!-- ahora tiene un producto dentro de la etiqueta tienda-->
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT descripción (#PCDATA)>
+    <!ELEMENT stock (#PCDATA)>
+    ]>
+<!-- Ejemplo de uso del lenguaje-->
+<tienda>
+    <producto>Esto es un producto</producto> <!-- Dentro de tienda tiene que haber UN producto si no se pone + -->
+    <producto>Este es otro producto</producto>
+    <producto>Otro más...</producto>
+</tienda>
