@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
 
   //-- Cabecera que indica el tipo de datos del
   //-- cuerpo de la respuesta: Texto plano
-  res.setHeader('Content-Type', 'text/plain');
+  res.setHeader('Content-Type', 'text/css');
 
   //-- Mensaje del cuerpo
   res.write("Soy el Happy server!!\n");
@@ -23,4 +23,4 @@ const server = http.createServer((req, res) => {
 //-- Activar el servidor: ¡Que empiece la fiesta!
 server.listen(PUERTO);
 
-console.log("Happy server5 activado!. Escuchando en puerto: " + PUERTO);
+console.log("Happy server5e activado!. Escuchando en puerto: " + PUERTO);
