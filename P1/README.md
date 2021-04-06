@@ -13,4 +13,4 @@
  
  **1 PÁGINA PRINCIPAL CON 3 PRODUCTOS DISTINTOS.**
  
- **Como mejora añadir /ls. Genera una página html dinámica con un listado de todos los ficheros de nuestra página principal.
+ Como mejora añadir /ls. Genera una página html dinámica con un listado de todos los ficheros de nuestra página principal.
