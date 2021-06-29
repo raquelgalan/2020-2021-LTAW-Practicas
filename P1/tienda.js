@@ -7,20 +7,11 @@ const url = require('url');//-- Módulo url
 const PUERTO = 9000; //-- Puerto a utilizar
 
 
-const mime = {
-  'html' : 'text/html',
-  'css'  : 'text/css',
-  'jpg'  : 'image/jpg'
-};
-
-
 //-- Crear el servidor. Por cada petición se imprime mensaje.
 const server = http.createServer(function (req, res) {
     
   //-- Indicamos que se ha recibido una petición
   console.log("Petición recibida!");
-
-
 
   //-- La clase mas usada es la URL que es la que me permite crear objetos URL
 
@@ -35,24 +26,26 @@ const server = http.createServer(function (req, res) {
   //-- cuerpo de la respuesta: Texto plano
   res.setHeader('Content-Type', 'text/plain');
 
-
   //-- Cargar en el fichero mi tienda
-  let filename = "tienda.html";
+  let filename = "";
+
+  const mime = {
+    'html' : 'text/html',
+    'css'  : 'text/css',
+    'jpg'  : 'image/jpg',
+    'jpeg' : 'image/jpeg',
+    'png'  : 'image/png'
+  };
 
   //-- Obtenemos el fichero correspondiente.
-  if(myURL.pathname /= filename){
-    console.log("url no válida")
+  if (myURL.pathname == '/'){
+    filename += "tienda.html";  //-- Abrir página
+  }else{
+    filename += myURL.pathname.substr(1);  //-- Abrir fichero
   }
 
-
   //-- Realizar la lectura asíncrona
-  fs.readFile(filename,'utf8', (err, data) => {
-
-    //-- Cuando los datos están ya disponibles
-    //-- los mostramos en la consola
-    console.log("Lectura completada...")
-    console.log("Contenido del fichero: \n")
-    console.log(data);
+  fs.readFile(filename, (err, data) => {
 
     //-- Petición 200 OK
     res.writeHead(200, {'Content-Type': mime});
@@ -61,7 +54,7 @@ const server = http.createServer(function (req, res) {
     //-- Enviar datos 
     res.write(data);
     res.end();
-
+  
   });
 });
 
