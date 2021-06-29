@@ -46,7 +46,10 @@ const server = http.createServer(function (req, res) {
 
   //-- Realizar la lectura asíncrona
   fs.readFile(filename, (err, data) => {
-
+    if (err){
+      res.writeHead(404, {'Content-Type': mime});
+      return res.end('404 not found');
+    }
     //-- Petición 200 OK
     res.writeHead(200, {'Content-Type': mime});
     console.log("Petición 200 OK");
