@@ -17,12 +17,12 @@ const mime = {
 //-- Crear el servidor. Por cada petición se imprime mensaje.
 const server = http.createServer(function (req, res) {
     
-    //-- Indicamos que se ha recibido una petición
-    console.log("Petición recibida!");
+  //-- Indicamos que se ha recibido una petición
+  console.log("Petición recibida!");
 
 
 
-//-- La clase mas usada es la URL que es la que me permite crear objetos URL
+  //-- La clase mas usada es la URL que es la que me permite crear objetos URL
 
   //-- Crear el objeto URL del mensaje de solitud (req)
   //-- y coger el recurso (url)
@@ -35,6 +35,34 @@ const server = http.createServer(function (req, res) {
   //-- cuerpo de la respuesta: Texto plano
   res.setHeader('Content-Type', 'text/plain');
 
+
+  //-- Cargar en el fichero mi tienda
+  let filename = "tienda.html";
+
+  //-- Obtenemos el fichero correspondiente.
+  if(myURL.pathname /= filename){
+    console.log("url no válida")
+  }
+
+
+  //-- Realizar la lectura asíncrona
+  fs.readFile(filename,'utf8', (err, data) => {
+
+    //-- Cuando los datos están ya disponibles
+    //-- los mostramos en la consola
+    console.log("Lectura completada...")
+    console.log("Contenido del fichero: \n")
+    console.log(data);
+
+    //-- Petición 200 OK
+    res.writeHead(200, {'Content-Type': mime});
+    console.log("Petición 200 OK");
+
+    //-- Enviar datos 
+    res.write(data);
+    res.end();
+
+  });
 });
 
 //-- Activar servidor, escuchando peticiones en el puerto.
