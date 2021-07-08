@@ -19,16 +19,6 @@ body{
     background-color:#fff;
     z-index:999999;
 }
-.amatista, .inciensos, .velas{
-    display: inline;
-	float: left;
-	border-radius: 0px 0px 0px 0px;
-	margin: 30px 30px 30px 110px;
-	text-align: center;
-    margin-top: 60px;
-    background-color:#fff;
-
-}
 
 /* -----------------------------------------------------------------------
    FONDO EN MOVIMIENTO
@@ -71,6 +61,27 @@ body{
 }
 #features{
     background:url("wiki/pattern.png"),url("wiki/fondo.jpeg");
+}
+
+
+.error_text{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.error{
+ 
+    display: block;
+    position: absolute;
+    top: 25%;
+    bottom: 40%;
+    left: 10%;
+    right: 10%;
+    margin: -25px -25px -25px -25px;
+    justify-content: space-between;
+    text-align: center;
 }
 
 /*-------------------------------------------------------------------

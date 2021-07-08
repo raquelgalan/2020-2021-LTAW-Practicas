@@ -19,15 +19,14 @@ body{
     background-color:#fff;
     z-index:999999;
 }
-.amatista, .inciensos, .velas{
+.piedras, .collar{
     display: inline;
 	float: left;
 	border-radius: 0px 0px 0px 0px;
-	margin: 30px 30px 30px 110px;
+	margin: 110px 220px 120px 120px;
 	text-align: center;
     margin-top: 60px;
     background-color:#fff;
-
 }
 
 /* -----------------------------------------------------------------------
