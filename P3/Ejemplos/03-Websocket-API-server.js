@@ -26,7 +26,7 @@ wsServer.on('request', (req) => {
 
     //-- Retrollamada de mensaje recibido
     connection.on('message', (message) => {
-        console.log("MENSAGE RECIBIDO");
+        console.log("MENSAJE RECIBIDO");
         console.log("  Tipo de mensaje: " + message.type);
         if (message.type === 'utf8') {
             console.log("  Mensaje: " + message.utf8Data.green);
