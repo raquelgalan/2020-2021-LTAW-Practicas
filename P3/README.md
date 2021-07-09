@@ -22,3 +22,4 @@ El servidor procesa los siguientes comandos pero no los envia al resto de usuari
 
 ### Ejemplo de ejecución:
 En una terminal (dentro de la carpeta que contenga los ficheros del chat) se pone: node chat-server.js
+Y en un Navegador (Firefox o Google Chrome) abrir tantas páginas como número de usuarios se quiera, poniendo: http://localhost:8080/chat.html
