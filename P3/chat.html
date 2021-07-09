@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>El Rincón del Chat</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="chat.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,400italic,500italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- Cargar la biblioteca Socket.IO. Nos la debe entregar el servidor -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Cliente que usa los Sockets.io-->
+    <script src="chat-client.js" defer></script>
+</head>
+
+<body>
+    
+   
+
+
+  <h2>Bienvenid@ al Chat</h2>
+  <input type="text" placeholder="Escribe aquí los mensajes..." size="30" style="height:30px" autocomplete="off" id="msg">
+  <button type="button" id="enviar">Enviar</button>
+  <h3>Mensajes recibidos</h3>
+  <p id="display"></p>
+
+
+          
+  <footer class="footer">
+    <div class="container">
+        <div class="row text-center">  
+            <p>Página web realizada por Raquel Galán</p>
+            <a href="mailto:raquelgm1@msn.com">raquelgm1@msn.com</a>
+
+            <div class="row text-center">
+                <p class="copyright">Copyright© 2021 <a href="http://templatestock.co">Template Stock</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JAVASCRIPTS -->
+<script src="wiki/animated.js"></script>
+
+</body>
+</html>
+
+
